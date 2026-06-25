@@ -1,0 +1,59 @@
+version: 2
+
+models:
+  - name: dim_carmake
+    description: "Dimension de marcas de vehiculos. Contiene id y nombre"
+    columns:
+      - name: ID_CARMAKE
+        description: "ID del coche"
+        tests:
+          - unique
+          - not_null
+      - name: CARMAKE
+        description: "Marca del coche"
+        tests:
+          - not_null
+
+  - name: dim_salesperson
+    description: "Dimension de nombres de vendedores. Contiene id y nombre"
+    columns:
+      - name: ID_SALESPERSON
+        description: "ID del vendedor"
+        tests:
+          - unique
+          - not_null
+      - name: SALESPERSON
+        description: "Nombre del vendedor"
+        tests:
+          - not_null
+
+  - name: fct_monthly_sales
+    description: "Tabla de hechos que consolida las ventas agregadas por vendedor y marca de coches"
+    columns:
+      - name: DDATE
+        description: "Mes de la venta"
+        tests:
+          - not_null
+      - name: ID_SALESPERSON
+        description: "Id del vendedor"
+        tests:
+          - not_null
+          - relationships:
+              arguments: 
+                to: ref('dim_salesperson')
+                field: ID_SALESPERSON
+      - name: ID_CARMAKE
+        description: "Id de la marca"
+        tests:
+          - not_null
+          - relationships:
+              arguments: 
+                to: ref('dim_carmake')
+                field: ID_CARMAKE
+      - name: TOTALSALE
+        description: "Monto total de la venta neta para el mes, vendedor y marca"
+      - name: TOTALCOM
+        description: "Monto total de la comisión para ese mes, vendedor y marca"
+
+        
+          
