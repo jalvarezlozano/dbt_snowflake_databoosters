@@ -1,0 +1,7 @@
+models:
+  - name: psg_monthly_sales_make
+    description: "modelo intermedio que agrupa ventas de manera mensual por marca"
+    columns:
+      - name: DDATE
+        description: "solo se encuentran fecha de inicio de cada mes"
+        
