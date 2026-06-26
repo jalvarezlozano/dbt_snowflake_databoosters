@@ -17,7 +17,7 @@ models:
               arguments: 
                 values: ['Toyota', 'Honda', 'Ford','Chevrolet','BMW','Mercedez-Benz','Volkwagen']
                 config: 
-                severity: warn
+                  severity: warn
             
 
   - name: dim_salesperson
