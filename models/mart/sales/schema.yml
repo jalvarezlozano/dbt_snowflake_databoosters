@@ -13,6 +13,12 @@ models:
         description: "Marca del coche"
         tests:
           - not_null
+          - accepted_values:
+              arguments: 
+                values: ['Toyota', 'Honda', 'Ford','Chevrolet','BMW','Mercedez-Benz','Volkwagen']
+                config: 
+                severity: warn
+            
 
   - name: dim_salesperson
     description: "Dimension de nombres de vendedores. Contiene id y nombre"
