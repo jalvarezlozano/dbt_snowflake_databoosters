@@ -28,3 +28,39 @@ sources:
             description: "Porcentaje de comision del vendedor"
           - name: COMMISSIONEARNED
             description: "Valor de la comision del vendedor"
+      - name: SALESPERSON
+        description: "Tabla de vendedores"
+        columns:
+          - name: SALESPERSON_ID
+            description: "ID del vendedor"
+            tests:
+              - not_null
+          - name: SALESPERSON_NAME
+            description: "Nombre del vendedor"
+          - name: COMMISSIONRATE
+            description: "Porcentaje de comision del vendedor"
+          - name: STORE_ID
+            description: "ID de la tienda"
+          - name: STATUS
+            description: "Status del vendedor"
+          - name: LAST_UPDATED_TS
+            description: "Ultima fecha de modificacion"
+      - name: MARKETING_PIVOTED_PERFORMANCE
+        description: "Tabla de vendedores"
+        columns:
+          - name: CAMPAIGN_ID
+            description: "ID del vendedor"
+          - name: REPORT_DATE
+            description: "Nombre del vendedor"
+          - name: CHANNEL_NAME
+            description: "Porcentaje de comision del vendedor"
+          - name: METRIC_NAME
+            description: "ID de la tienda"
+          - name: METRIC_VALUE
+            description: "Status del vendedor"
+      - name: REGIONAL_SALES_APAC
+        description: "Tabla de vendedores"
+      - name: REGIONAL_SALES_EU
+        description: "Tabla de vendedores"
+      - name: REGIONAL_SALES_NA
+        description: "Tabla de vendedores"
