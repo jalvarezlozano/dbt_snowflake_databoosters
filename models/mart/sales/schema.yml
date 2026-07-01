@@ -34,7 +34,7 @@ models:
           - not_null
 
   - name: fct_monthly_sales
-    description: "Tabla de hechos que consolida las ventas agregadas por vendedor y marca de coches"
+    description: "{{ doc('desc_fct_monthly_sales') }}"
     columns:
       - name: DDATE
         description: "Mes de la venta"
